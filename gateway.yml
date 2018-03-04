@@ -13,3 +13,28 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:1111/eureka/
+
+zuul:
+  ignoredServices: '*'
+  host:
+    connect-timeout-millis: 20000
+    socket-timeout-millis: 20000
+
+  routes:
+    account-registry-service:
+        path: /account/registry/**
+        serviceId: account-registry-service
+        stripPrefix: false
+        sensitiveHeaders:
+
+    user-admin-service:
+        path: /user/admin/**
+        serviceId: user-admin-service
+        stripPrefix: false
+        sensitiveHeaders:
+
+    notification-service:
+        path: /notification/**
+        serviceId: notification-service
+        stripPrefix: false
+        sensitiveHeaders:      
