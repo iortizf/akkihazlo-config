@@ -1,7 +1,6 @@
 server:
   port: 8083
-  context-path: /account/registry
-
+  
 logging:
   file: logs/${spring.application.name}.log
   level:
