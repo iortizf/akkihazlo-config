@@ -49,4 +49,10 @@ zuul:
         path: /notification/**
         serviceId: notification-service
         stripPrefix: false
-        sensitiveHeaders:      
+        sensitiveHeaders:    
+
+    ui-platform:
+        path: /**
+        serviceId: ui-platform
+        stripPrefix: false
+        sensitiveHeaders:
